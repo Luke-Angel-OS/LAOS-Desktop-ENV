@@ -20,9 +20,6 @@ fi
 echo "=== Installing Xorg stack ==="
 yay -S --noconfirm xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xmodmap
 
-echo "=== Installing SDDM display manager ==="
-yay -S --noconfirm sddm
-sudo systemctl enable sddm
 
 echo "=== Installing core window manager stack ==="
 yay -S --noconfirm bspwm sxhkd
@@ -140,6 +137,11 @@ echo "=== Ensuring bspwmrc calls autostart ==="
 if ! grep -q "autostart.sh" ~/.config/bspwm/bspwmrc; then
     echo "~/.config/bspwm/autostart.sh &" >> ~/.config/bspwm/bspwmrc
 fi
+
+echo "=== Installing SDDM display manager ==="
+yay -S --noconfirm sddm
+sudo systemctl enable sddm
+
 
 echo "=== Enabling SDDM ==="
 sudo systemctl enable sddm
