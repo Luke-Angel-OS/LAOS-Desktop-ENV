@@ -82,14 +82,14 @@ cp ~/brodie-dotfiles/.imwheelrc ~/
 
 echo "=== Copying config directory ==="
 mkdir -p ~/.config
-cp -r ~/brodie-dotfiles/config/* ~/.config/
+cp -av ~/brodie-dotfiles/config/* ~/.config/
 
 echo "=== Cloning Brodie's scripts repo ==="
 git clone https://github.com/BrodieRobertson/scripts ~/brodie-scripts
 
 echo "=== Installing scripts ==="
 mkdir -p ~/.local/bin
-cp ~/brodie-scripts/* ~/.local/bin/
+cp -av ~/brodie-scripts/* ~/.local/bin/
 chmod +x ~/.local/bin/*
 
 echo "=== Ensuring .xinitrc launches bspwm ==="
