@@ -90,6 +90,9 @@ git clone https://github.com/BrodieRobertson/scripts ~/brodie-scripts
 echo "=== Installing scripts ==="
 mkdir -p ~/.local/bin
 cp -av ~/brodie-scripts/* ~/.local/bin/
+
+echo "=== Removing broken symlinks ==="
+find ~/.local/bin -xtype l -delete
 chmod +x ~/.local/bin/*
 
 echo "=== Ensuring .xinitrc launches bspwm ==="
