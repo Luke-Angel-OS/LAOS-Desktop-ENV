@@ -36,7 +36,7 @@ echo "=== Removing media tools ==="
 sudo pacman -Rns --noconfirm mpv playerctl pamixer
 
 echo "=== Removing fonts ==="
-sudo pacman -Rns --noconfirm ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji
+sudo pacman -Rns --noconfirm ttf-jetbrains-mono-nerd
 
 echo "=== Removing shell + prompt ==="
 sudo pacman -Rns --noconfirm starship
