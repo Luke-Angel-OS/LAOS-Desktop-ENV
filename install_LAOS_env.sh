@@ -59,7 +59,8 @@ yay -S --noconfirm ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji
 
 echo "=== Installing shell + prompt ==="
 yay -S --noconfirm zsh starship
-chsh -s /bin/zsh
+sudo usermod -s /bin/zsh "$USER"
+
 
 echo "=== Installing CLI tools ==="
 yay -S --noconfirm ripgrep fd bat jq git
